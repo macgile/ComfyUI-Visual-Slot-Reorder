@@ -1,0 +1,22 @@
+[project]
+name = "comfyui-visual-slot-reorder-nodes2-compat"
+version = "1.0.0"
+description = "Frontend-only ComfyUI extension for visual slot reordering, compatible with Classic LiteGraph and Nodes 2.0 renderers."
+license = { file = "LICENSE.txt" }
+requires-python = ">=3.10"
+dependencies = []
+classifiers = [
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Repository = "https://github.com/YOUR_USERNAME/ComfyUI-Visual-Slot-Reorder-Nodes2-Compat"
+Documentation = "https://github.com/YOUR_USERNAME/ComfyUI-Visual-Slot-Reorder-Nodes2-Compat#readme"
+"Bug Tracker" = "https://github.com/YOUR_USERNAME/ComfyUI-Visual-Slot-Reorder-Nodes2-Compat/issues"
+
+[tool.comfy]
+PublisherId = "YOUR_PUBLISHER_ID"
+DisplayName = "ComfyUI Visual Slot Reorder - Nodes 2 Compat"
+Icon = ""
+requires-comfyui = ">=0.3.0"
+includes = ["js"]

@@ -1,0 +1,19 @@
+# Development-only files
+.git/
+.github/
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+.DS_Store
+Thumbs.db
+node_modules/
+dist/
+build/
+tests/
+docs/dev/
+*.psd
+*.kra
