@@ -1,7 +1,5 @@
 # ComfyUI Visual Slot Reorder - Nodes 2 Compat
 
-First public release: `1.0.0`.
-
 ComfyUI Visual Slot Reorder is a frontend-only ComfyUI extension that lets you visually reorder supported node input and output ports. Its goal is to make large workflows easier to read without changing how the workflow executes.
 
 This build supports both ComfyUI renderers:
@@ -29,7 +27,7 @@ The extension stores a visual port order separately from ComfyUI's canonical slo
 Copy the extension folder into your ComfyUI `custom_nodes` directory:
 
 ```text
-ComfyUI/custom_nodes/ComfyUI-Visual-Slot-Reorder-Nodes2-Compat/
+ComfyUI/custom_nodes/ComfyUI-Visual-Slot-Reorder/
 ```
 
 Then restart ComfyUI completely.
@@ -52,8 +50,6 @@ js/reorder_nodes.js
 js/reorder_nodes_maintenance_tools.js
 js/reorder_nodes_public_api_cleanup.js
 ```
-
-`CHANGELOG.md` is intentionally not included in this first public release. A changelog becomes useful after public distribution, for example when publishing later bug-fix or feature versions such as `1.0.1` or `1.1.0`.
 
 ## Usage
 
@@ -107,7 +103,7 @@ A side of a node is reorderable only when it passes structural checks:
 The stable slot key is:
 
 ```text
-name + "\\u001f" + type
+name + "\u001f" + type
 ```
 
 If a node side is ambiguous, dynamic, duplicated, or unsafe, VSR does not enable visual reorder for that side.
@@ -165,20 +161,6 @@ window.ReorderNodes.__dev.nodes2.getStatus()
 window.ReorderNodes.__dev.diagnostics.reportWorkflowSafetyScan()
 window.ReorderNodes.__dev.diagnostics.reportWorkflowCompatibility()
 ```
-
-## Registry metadata to edit before publishing
-
-Before publishing to ComfyUI Registry, edit `pyproject.toml` and replace the placeholder values:
-
-```toml
-Repository = "https://github.com/YOUR_USERNAME/ComfyUI-Visual-Slot-Reorder-Nodes2-Compat"
-Documentation = "https://github.com/YOUR_USERNAME/ComfyUI-Visual-Slot-Reorder-Nodes2-Compat#readme"
-"Bug Tracker" = "https://github.com/YOUR_USERNAME/ComfyUI-Visual-Slot-Reorder-Nodes2-Compat/issues"
-PublisherId = "YOUR_PUBLISHER_ID"
-Icon = ""
-```
-
-Use your real repository URL, your real Comfy Registry publisher ID, and optionally a square icon URL.
 
 ## Compatibility notes
 
@@ -247,3 +229,7 @@ This package is frontend-only:
 - No runtime dependency installation is performed.
 - No network calls are required by the extension.
 - No workflow execution logic is intentionally changed.
+
+## License
+
+MIT
